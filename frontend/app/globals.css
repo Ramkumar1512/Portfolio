@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 248 250 252;       
+    --surface: 255 255 255;          
+    --primary: 5 150 105;            
+    --secondary: 2 132 199;          
+    --accent: 124 58 237;            
+    --muted: 228 228 231;            
+    --text-main: 51 65 85;           
+    --text-heading: 15 23 26;        
+    --border-color: 226 232 240;     
+  }
+
+  .dark {
+    --background: 10 10 10;          
+    --surface: 17 17 17;             
+    --primary: 16 185 129;           
+    --secondary: 14 165 233;         
+    --accent: 139 92 246;            
+    --muted: 82 82 91;               
+    --text-main: 209 213 219;        
+    --text-heading: 255 255 255;     
+    --border-color: 31 41 55;        
+  }
+
+  body {
+    @apply bg-background text-text-main font-sans antialiased overflow-x-hidden selection:bg-primary/30 selection:text-primary transition-colors duration-300;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-text-heading font-bold tracking-tight transition-colors duration-300;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-background;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-surface border border-border-color rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-surface/60 backdrop-blur-md border border-gray-800/60;
+  }
+  
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
