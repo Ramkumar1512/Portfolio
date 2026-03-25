@@ -19,6 +19,7 @@ export default function Contact() {
             href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
+            download="Ram_Kumar_Resume.pdf"
             className="inline-flex items-center justify-center gap-2 text-text-main font-mono border border-border-color bg-surface/80 backdrop-blur-sm h-12 px-6 rounded-md hover:bg-muted transition-colors"
           >
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

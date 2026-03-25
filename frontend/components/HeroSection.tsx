@@ -108,6 +108,7 @@ export default function HeroSection() {
               href="/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
+              download="Ram_Kumar_Resume.pdf"
               className="inline-flex items-center justify-center gap-2 text-text-main font-mono hover:text-text-heading transition-colors h-12 px-4"
             >
               <Download className="w-4 h-4" />
