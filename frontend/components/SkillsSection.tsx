@@ -25,7 +25,7 @@ const itemVariants: Variants = {
 };
 
 const SKILLS = [
-  { category: "Languages", items: ["Python", "SQL", "C++"] },
+  { category: "Languages", items: ["Python", "SQL", "Golang", "C++"] },
   { category: "Frameworks", items: ["Django", "DRF", "Flask", "FastAPI"] },
   { category: "Databases", items: ["PostgreSQL", "MySQL", "MongoDB", "Redis", "SQLite"] },
   { category: "Backend & Systems", items: ["API Architecture", "Async Processing", "Caching", "DB Optimization"] },
@@ -49,7 +49,7 @@ export default function SkillsSection() {
           <div className="h-1 w-20 bg-primary rounded-full"></div>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
           variants={containerVariants}
           initial="hidden"
@@ -64,7 +64,7 @@ export default function SkillsSection() {
             >
               {/* Subtle background glow on hover */}
               <div className="absolute -inset-1 bg-gradient-to-r from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity blur-xl"></div>
-              
+
               <h3 className="text-xl font-bold text-text-heading mb-6 relative z-10">
                 {skillGroup.category}
               </h3>
